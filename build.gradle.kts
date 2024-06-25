@@ -32,6 +32,7 @@ dependencies {
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     implementation("org.springframework.boot:spring-boot-starter-data-jpa")
     implementation("org.hibernate.orm:hibernate-core:6.5.2.Final") // Hibernate 최신 버전 추가
+    implementation ("org.modelmapper:modelmapper:3.1.0")
 }
 
 tasks.withType<Test> {

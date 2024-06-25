@@ -14,10 +14,9 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
 @Entity
-@Getter @Setter
+@Getter
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
@@ -44,5 +43,10 @@ public class UserEntity {
     @Column(updatable=false, name = "CREATED_DATE" )
     private LocalDateTime createdDate;
 
-
+    public UserEntity (String user_ID, String user_PW, String user_Name, String loginType) {
+        this.user_ID = user_ID;
+        this.user_PW = user_PW;
+        this.user_Name = user_Name;
+        this.loginType = loginType;
+    }
 }
