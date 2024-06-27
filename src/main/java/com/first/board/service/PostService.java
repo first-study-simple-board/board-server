@@ -46,6 +46,15 @@ public class PostService {
     }
 
     @Transactional
+    public PostDTO updatedpost(Long postId, PostDTO postDTO) {
+        PostEntity postEntity = postRepository.findById(postId)
+                .orElseThrow(() -> new RuntimeException("글을 찾을 수 없습니다."));
+        postEntity.update(postDTO.getTitle(), postDTO.getP_Content());
+        PostEntity updatedPost = postRepository.save(postEntity);
+        return modelMapper.map(updatedPost, PostDTO.class);
+    }
+
+    @Transactional
     public void deleteByPostID (Long post_ID) {
         postRepository.deleteById(post_ID);
     }

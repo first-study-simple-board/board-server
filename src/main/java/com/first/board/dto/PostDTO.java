@@ -9,11 +9,12 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Getter
+@Getter @Setter
 public class PostDTO {
     private Long post_ID;
     private UserEntity user_ID;

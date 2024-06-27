@@ -3,14 +3,17 @@ package com.first.board.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.first.board.dto.PostDTO;
 import com.first.board.service.PostService;
+
 
 @RestController
 @RequestMapping("/api/posts")
@@ -23,13 +26,22 @@ public class PostController {
     }
 
     @GetMapping
-    public ResponseEntity<List<PostDTO>> getAllPost() {
-        List<PostDTO> posts = postService.getAllPost();
-        return ResponseEntity.ok(posts);
+    public List<PostDTO> getAllPosts() {
+        return postService.getAllPost();
+    }
+
+    @PutMapping("/{id}")
+    public PostDTO updatePost(@PathVariable("post_ID") Long postId, @RequestBody PostDTO postDTO) {
+        return postService.updatedpost(postId, postDTO);
+    }
+
+    @PostMapping()
+    public PostDTO createPost(@RequestBody PostDTO postDTO) {
+        return postService.createdPost(postDTO);
     }
     
     @GetMapping("/{id}")
-    public void deletePost(@PathVariable Long post_ID) {
+    public void deletePost(@PathVariable("post_ID")Long post_ID) {
         postService.deleteByPostID(post_ID);
     }
 }

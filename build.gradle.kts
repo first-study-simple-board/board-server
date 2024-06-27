@@ -25,14 +25,14 @@ repositories {
 dependencies {
     implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("jakarta.persistence:jakarta.persistence-api:3.1.0")
+    implementation("org.modelmapper:modelmapper:2.3.8")
+    implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+    implementation("org.hibernate.orm:hibernate-core:6.5.2.Final")
     compileOnly("org.projectlombok:lombok")
     developmentOnly("org.springframework.boot:spring-boot-devtools")
     runtimeOnly("com.microsoft.sqlserver:mssql-jdbc")
     annotationProcessor("org.projectlombok:lombok")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
-    implementation("org.springframework.boot:spring-boot-starter-data-jpa")
-    implementation("org.hibernate.orm:hibernate-core:6.5.2.Final") // Hibernate 최신 버전 추가
-    implementation ("org.modelmapper:modelmapper:3.1.0")
 }
 
 tasks.withType<Test> {

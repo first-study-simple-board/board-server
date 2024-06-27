@@ -50,4 +50,9 @@ public class PostEntity {
         this.p_Content = p_content;
         this.post_PW = post_PW;
     }
+
+    public void update (String title, String p_Content) {
+        this.title = title;
+        this.p_Content = p_Content;
+    }
 }
