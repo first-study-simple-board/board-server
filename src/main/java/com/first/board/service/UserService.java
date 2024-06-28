@@ -4,7 +4,6 @@ import java.util.List;
 
 import org.springframework.stereotype.Service;
 
-import com.first.board.dto.UserDTO;
 import com.first.board.entity.UserEntity;
 import com.first.board.repository.UserRepository;
 
@@ -28,8 +27,8 @@ public class UserService {
         userRepository.deleteById(user_Index);
     }
 
-    @Transactional
-    public UserEntity createdUser (UserDTO userDTO) {
-        return userRepository.save(userDTO.toUserEntity());
-    }
+    // @Transactional
+    // public UserEntity createdUser (UserDTO userDTO) {
+    //     return userRepository.save(userDTO.);
+    // }
 }

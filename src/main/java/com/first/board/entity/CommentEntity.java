@@ -25,7 +25,7 @@ import lombok.NoArgsConstructor;
 public class CommentEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long comment_ID;
+    private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "post_ID")
@@ -35,19 +35,18 @@ public class CommentEntity {
     @JoinColumn(name = "user_ID")
     private UserEntity user_ID;
 
-    private String c_Comment;
-
-    private String comment_Type;
+    private String content;
 
     @CreatedDate
     @Column(updatable=false)
     private LocalDateTime createdDate;
 
-    public CommentEntity (PostEntity post_ID, UserEntity user_ID, String c_Comment, String comment_Type) {
+    public CommentEntity (Long id, String content, LocalDateTime createdDate, UserEntity user_ID, PostEntity post_ID) {
+        this.id = id;
         this.post_ID = post_ID;
         this.user_ID = user_ID;
-        this.c_Comment = c_Comment;
-        this.comment_Type = comment_Type;
+        this.content = content;
+        this.createdDate = createdDate;
     }
 
     

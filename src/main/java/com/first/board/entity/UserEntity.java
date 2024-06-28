@@ -25,16 +25,16 @@ public class UserEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long user_Index;
+    private Long id;
 
     @Column(name = "USER_ID")
-    private String user_ID;
+    private String account;
 
     @Column(name = "USER_PW")
     private String user_PW;
 
     @Column(name = "USER_NAME")
-    private String user_Name;
+    private String user_NickName;
 
     @Column(name = "LOGINTYPE")
     private String loginType;
@@ -43,10 +43,10 @@ public class UserEntity {
     @Column(updatable=false, name = "CREATED_DATE" )
     private LocalDateTime createdDate;
 
-    public UserEntity (String user_ID, String user_PW, String user_Name, String loginType) {
-        this.user_ID = user_ID;
+    public UserEntity (Long id, String user_PW, String user_NickName, String loginType) {
+        this.id = id;
         this.user_PW = user_PW;
-        this.user_Name = user_Name;
+        this.user_NickName = user_NickName;
         this.loginType = loginType;
     }
 }

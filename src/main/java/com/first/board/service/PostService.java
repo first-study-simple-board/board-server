@@ -60,4 +60,16 @@ public class PostService {
     }
 
 
+    public void insertpost() {
+        PostDTO postDTO = new PostDTO();
+        postDTO.setTitle("제목");
+        postDTO.setPost_PW("글 비밀번호");
+        postDTO.setP_Content("냥");
+
+        PostEntity postEntity = modelMapper.map(postDTO, PostEntity.class);
+        PostEntity savePost = postRepository.save(postEntity);
+        modelMapper.map(savePost, PostDTO.class);
+        postRepository.save(postEntity);
+    }
+
 }

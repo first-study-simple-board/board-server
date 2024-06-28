@@ -26,16 +26,15 @@ import lombok.NoArgsConstructor;
 public class PostEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long post_ID;
+    private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_ID")
+    @JoinColumn(name = "id")
     private UserEntity user_ID;
 
     private String title;
 
     private String p_Content;
-    private String post_PW;
 
     @CreatedDate
     @Column(updatable=false)
@@ -44,11 +43,12 @@ public class PostEntity {
     @LastModifiedDate
     private LocalDateTime modifiedDate;
 
-    public PostEntity (UserEntity user_ID, String title, String p_content, String post_PW) {
+    public PostEntity (Long id, String title, String p_content, LocalDateTime createdDate, UserEntity user_ID) {
+        this.id = id;
         this.user_ID = user_ID;
         this.title = title;
         this.p_Content = p_content;
-        this.post_PW = post_PW;
+        this.createdDate = createdDate;
     }
 
     public void update (String title, String p_Content) {

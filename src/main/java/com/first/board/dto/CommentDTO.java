@@ -16,24 +16,23 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Getter
 public class CommentDTO {
-    private Long comment_ID;
+    private Long id;
     private PostEntity post_ID;
     private UserEntity user_ID;
-    private String c_Comment;
+    private String content;
     private String comment_Type;
     private LocalDateTime createdDate;
 
     public CommentDTO(CommentEntity commentEntity){
-        this.comment_ID = commentEntity.getComment_ID();
+        this.id = commentEntity.getId();
         this.post_ID = commentEntity.getPost_ID();
         this.user_ID = commentEntity.getUser_ID();
-        this.c_Comment = commentEntity.getC_Comment();
-        this.comment_Type = commentEntity.getComment_Type();
+        this.content = commentEntity.getContent();
         this.createdDate = commentEntity.getCreatedDate();
     }
 
     public CommentEntity toCommentEntity() {
-        return new CommentEntity(post_ID, user_ID, c_Comment, comment_Type);
+        return new CommentEntity(id, content, createdDate, user_ID, post_ID);
     }
 
 }
