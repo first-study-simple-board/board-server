@@ -17,7 +17,7 @@ import lombok.Setter;
 @Getter @Setter
 public class PostDTO {
     private Long id;
-    private UserEntity user_ID;
+    private UserEntity userEntity;
     private String title;
     private String p_Content;
     private String post_PW;
@@ -26,7 +26,7 @@ public class PostDTO {
 
     public PostDTO(PostEntity postEntity){
         this.id = postEntity.getId();
-        this.user_ID = postEntity.getUser_ID();
+        this.userEntity = postEntity.getUserEntity();
         this.title = postEntity.getTitle();
         this.p_Content = postEntity.getP_Content();
         this.createdDate = postEntity.getCreatedDate();
@@ -34,6 +34,6 @@ public class PostDTO {
     }
 
     public PostEntity toPostEntity() {
-        return new PostEntity(id, title, p_Content, createdDate, user_ID);
+        return new PostEntity(id, title, p_Content, createdDate, userEntity);
     }
 }

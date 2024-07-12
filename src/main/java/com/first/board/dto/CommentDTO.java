@@ -17,22 +17,22 @@ import lombok.NoArgsConstructor;
 @Getter
 public class CommentDTO {
     private Long id;
-    private PostEntity post_ID;
-    private UserEntity user_ID;
+    private PostEntity postEntity;
+    private UserEntity userEntity;
     private String content;
     private String comment_Type;
     private LocalDateTime createdDate;
 
     public CommentDTO(CommentEntity commentEntity){
         this.id = commentEntity.getId();
-        this.post_ID = commentEntity.getPost_ID();
-        this.user_ID = commentEntity.getUser_ID();
+        this.postEntity = commentEntity.getPostEntity();
+        this.userEntity = commentEntity.getUserEntity();
         this.content = commentEntity.getContent();
         this.createdDate = commentEntity.getCreatedDate();
     }
 
     public CommentEntity toCommentEntity() {
-        return new CommentEntity(id, content, createdDate, user_ID, post_ID);
+        return new CommentEntity(id, content, createdDate, userEntity, postEntity);
     }
 
 }
