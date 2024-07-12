@@ -14,7 +14,9 @@ import org.springframework.web.bind.annotation.RestController;
 import com.first.board.dto.PostDTO;
 import com.first.board.service.PostService;
 
+import io.swagger.v3.oas.annotations.tags.Tag;
 
+@Tag(name = "posts", description = "게시물 API")
 @RestController
 @RequestMapping("/api/posts")
 public class PostController {

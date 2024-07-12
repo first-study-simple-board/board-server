@@ -25,14 +25,15 @@ import lombok.NoArgsConstructor;
 public class CommentEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "comment_id")
     private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "post_ID")
+    @JoinColumn(name = "post_id")
     private PostEntity post_ID;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_ID")
+    @JoinColumn(name = "member_id")
     private UserEntity user_ID;
 
     private String content;

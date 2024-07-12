@@ -36,7 +36,8 @@ out/
 ### VS Code ###
 .vscode/
 
-
-
 ### AWS Key ###
 sunneyboardkey.pem
+
+### application.properties ###
+application.properties

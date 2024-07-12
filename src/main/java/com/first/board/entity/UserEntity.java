@@ -25,9 +25,10 @@ public class UserEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "user_id")
     private Long id;
 
-    @Column(name = "USER_ID")
+    @Column(name = "USER_ACCOUNT")
     private String account;
 
     @Column(name = "USER_PW")
