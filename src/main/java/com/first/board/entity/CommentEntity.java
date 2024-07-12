@@ -29,11 +29,11 @@ public class CommentEntity {
     private Long id;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "post_id")
+    @JoinColumn(name = "postid")
     private PostEntity postEntity;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "member_id")
+    @JoinColumn(name = "memberid")
     private UserEntity userEntity;
 
     private String content;
@@ -49,7 +49,5 @@ public class CommentEntity {
         this.content = content;
         this.createdDate = createdDate;
     }
-
-    
 }
 
