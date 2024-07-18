@@ -29,7 +29,7 @@ public class CommentEntity {
     private Long comment_id;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "post_id", table = "POST")
+    @JoinColumn(name = "post_id", table = "PostEntity")
     private PostEntity postEntity;
 
     @Column(name="content")

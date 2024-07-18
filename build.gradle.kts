@@ -31,7 +31,7 @@ dependencies {
     compileOnly("org.projectlombok:lombok")
     developmentOnly("org.springframework.boot:spring-boot-devtools")
     //runtimeOnly("com.microsoft.sqlserver:mssql-jdbc")
-    runtimeOnly("mysql:mysql-connector-java:8.0.26")
+    runtimeOnly("mysql:mysql-connector-java:8.0.37")
     annotationProcessor("org.projectlombok:lombok")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     implementation ("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.6.0")
