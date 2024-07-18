@@ -32,9 +32,6 @@ public class CommentEntity {
     @JoinColumn(name = "post_id")
     private PostEntity postEntity;
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id")
-    private UserEntity userEntity;
 
     @Column(name="content")
     private String content;
@@ -43,10 +40,9 @@ public class CommentEntity {
     @Column(name = "createdDate", updatable=false)
     private LocalDateTime createdDate;
 
-    public CommentEntity (Long id, String content, LocalDateTime createdDate, UserEntity userEntity, PostEntity postEntity) {
+    public CommentEntity (Long id, String content, LocalDateTime createdDate, PostEntity postEntity) {
         this.comment_id = id;
         this.postEntity = postEntity;
-        this.userEntity = userEntity;
         this.content = content;
         this.createdDate = createdDate;
     }

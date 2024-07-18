@@ -26,13 +26,12 @@ public class CommentDTO {
     public CommentDTO(CommentEntity commentEntity){
         this.id = commentEntity.getComment_id();
         this.postEntity = commentEntity.getPostEntity();
-        this.userEntity = commentEntity.getUserEntity();
         this.content = commentEntity.getContent();
         this.createdDate = commentEntity.getCreatedDate();
     }
 
     public CommentEntity toCommentEntity() {
-        return new CommentEntity(id, content, createdDate, userEntity, postEntity);
+        return new CommentEntity(id, content, createdDate, postEntity);
     }
 
 }

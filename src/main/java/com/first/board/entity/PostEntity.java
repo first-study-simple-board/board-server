@@ -31,7 +31,7 @@ public class PostEntity {
     private Long post_id;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "memberid")
+    @JoinColumn(name = "user_id")
     private UserEntity userEntity;
 
     @Column(name = "title")
