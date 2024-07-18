@@ -26,11 +26,11 @@ public class CommentEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "comment_id")
-    private Long comment_id;
+    private Long commentId;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "post_id")
-    private PostEntity post_id;
+    private PostEntity postId;
 
     @Column(name="content")
     private String content;
@@ -40,8 +40,8 @@ public class CommentEntity {
     private LocalDateTime createdDate;
 
     public CommentEntity (Long id, String content, LocalDateTime createdDate, PostEntity postEntity) {
-        this.comment_id = id;
-        this.post_id = postEntity;
+        this.commentId = id;
+        this.postId = postEntity;
         this.content = content;
         this.createdDate = createdDate;
     }

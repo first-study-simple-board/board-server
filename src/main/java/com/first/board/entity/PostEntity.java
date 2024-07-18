@@ -28,36 +28,36 @@ public class PostEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "post_id")
-    private Long post_id;
+    private Long postId;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id")
-    private UserEntity user_id;
+    private UserEntity user;
 
     @Column(name = "title")
     private String title;
 
     @Column(name = "p_content")
-    private String p_Content;
+    private String content;
 
     @CreatedDate
-    @Column(name = "createdDate",updatable=false)
+    @Column(name = "created_date", updatable = false)
     private LocalDateTime createdDate;
 
     @LastModifiedDate
-    @Column(name="modifiedDate")
+    @Column(name = "modified_date")
     private LocalDateTime modifiedDate;
 
-    public PostEntity (Long id, String title, String p_content, LocalDateTime createdDate, UserEntity userEntity) {
-        this.post_id = id;
-        this.user_id = userEntity;
+    public PostEntity(Long postId, String title, String content, LocalDateTime createdDate, UserEntity user) {
+        this.postId = postId;
         this.title = title;
-        this.p_Content = p_content;
+        this.content = content;
         this.createdDate = createdDate;
+        this.user = user;
     }
 
-    public void update (String title, String p_Content) {
+    public void update(String title, String content) {
         this.title = title;
-        this.p_Content = p_Content;
+        this.content = content;
     }
 }

@@ -25,10 +25,10 @@ public class PostDTO {
     private LocalDateTime modifiedDate;
 
     public PostDTO(PostEntity postEntity){
-        this.id = postEntity.getPost_id();
-        this.userEntity = postEntity.getUser_id();
+        this.id = postEntity.getPostId();
+        this.userEntity = postEntity.getUser();
         this.title = postEntity.getTitle();
-        this.p_Content = postEntity.getP_Content();
+        this.p_Content = postEntity.getContent();
         this.createdDate = postEntity.getCreatedDate();
         this.modifiedDate = postEntity.getModifiedDate();   
     }

@@ -23,31 +23,32 @@ import lombok.NoArgsConstructor;
 @Table(name = "MEMBER")
 public class UserEntity {
 
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "user_id")
-    private Long user_id;
+    private Long userId;
 
-    @Column(name = "USER_ACCOUNT")
+    @Column(name = "user_account")
     private String account;
 
-    @Column(name = "USER_PW")
-    private String user_PW;
+    @Column(name = "user_pw")
+    private String userPw;
 
-    @Column(name = "USER_NAME")
-    private String user_NickName;
+    @Column(name = "user_name")
+    private String userName;
 
-    @Column(name = "LOGINTYPE")
+    @Column(name = "login_type")
     private String loginType;
 
     @CreatedDate
-    @Column(updatable=false, name = "CREATED_DATE" )
+    @Column(name = "created_date", updatable = false)
     private LocalDateTime createdDate;
 
-    public UserEntity (Long id, String user_PW, String user_NickName, String loginType) {
-        this.user_id = id;
-        this.user_PW = user_PW;
-        this.user_NickName = user_NickName;
+    public UserEntity(Long userId, String userPw, String userName, String loginType) {
+        this.userId = userId;
+        this.userPw = userPw;
+        this.userName = userName;
         this.loginType = loginType;
     }
 }

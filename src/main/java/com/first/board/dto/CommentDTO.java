@@ -24,8 +24,8 @@ public class CommentDTO {
     private LocalDateTime createdDate;
 
     public CommentDTO(CommentEntity commentEntity){
-        this.id = commentEntity.getComment_id();
-        this.postEntity = commentEntity.getPost_id();
+        this.id = commentEntity.getCommentId();
+        this.postEntity = commentEntity.getPostId();
         this.content = commentEntity.getContent();
         this.createdDate = commentEntity.getCreatedDate();
     }
