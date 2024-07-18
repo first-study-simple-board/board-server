@@ -25,7 +25,7 @@ public class CommentDTO {
 
     public CommentDTO(CommentEntity commentEntity){
         this.id = commentEntity.getComment_id();
-        this.postEntity = commentEntity.getPostEntity();
+        this.postEntity = commentEntity.getPost_id();
         this.content = commentEntity.getContent();
         this.createdDate = commentEntity.getCreatedDate();
     }

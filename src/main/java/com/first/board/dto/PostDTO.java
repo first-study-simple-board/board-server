@@ -26,7 +26,7 @@ public class PostDTO {
 
     public PostDTO(PostEntity postEntity){
         this.id = postEntity.getPost_id();
-        this.userEntity = postEntity.getUserEntity();
+        this.userEntity = postEntity.getUser_id();
         this.title = postEntity.getTitle();
         this.p_Content = postEntity.getP_Content();
         this.createdDate = postEntity.getCreatedDate();

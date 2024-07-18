@@ -31,8 +31,8 @@ public class PostEntity {
     private Long post_id;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "user_id", table="UserEntity")
-    private UserEntity userEntity;
+    @JoinColumn(name = "user_id")
+    private UserEntity user_id;
 
     @Column(name = "title")
     private String title;
@@ -50,7 +50,7 @@ public class PostEntity {
 
     public PostEntity (Long id, String title, String p_content, LocalDateTime createdDate, UserEntity userEntity) {
         this.post_id = id;
-        this.userEntity = userEntity;
+        this.user_id = userEntity;
         this.title = title;
         this.p_Content = p_content;
         this.createdDate = createdDate;
