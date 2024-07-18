@@ -26,7 +26,7 @@ public class UserEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "user_id")
-    private Long id;
+    private Long user_id;
 
     @Column(name = "USER_ACCOUNT")
     private String account;
@@ -45,7 +45,7 @@ public class UserEntity {
     private LocalDateTime createdDate;
 
     public UserEntity (Long id, String user_PW, String user_NickName, String loginType) {
-        this.id = id;
+        this.user_id = id;
         this.user_PW = user_PW;
         this.user_NickName = user_NickName;
         this.loginType = loginType;

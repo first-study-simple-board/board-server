@@ -26,24 +26,25 @@ public class CommentEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "comment_id")
-    private Long id;
+    private Long comment_id;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "postid")
+    @JoinColumn(name = "post_id")
     private PostEntity postEntity;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "memberid")
+    @JoinColumn(name = "user_id")
     private UserEntity userEntity;
 
+    @Column(name="content")
     private String content;
 
     @CreatedDate
-    @Column(updatable=false)
+    @Column(name = "createdDate", updatable=false)
     private LocalDateTime createdDate;
 
     public CommentEntity (Long id, String content, LocalDateTime createdDate, UserEntity userEntity, PostEntity postEntity) {
-        this.id = id;
+        this.comment_id = id;
         this.postEntity = postEntity;
         this.userEntity = userEntity;
         this.content = content;

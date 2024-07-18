@@ -28,7 +28,7 @@ public class PostEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "post_id")
-    private Long id;
+    private Long post_id;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "memberid")
@@ -41,14 +41,15 @@ public class PostEntity {
     private String p_Content;
 
     @CreatedDate
-    @Column(updatable=false)
+    @Column(name = "createdDate",updatable=false)
     private LocalDateTime createdDate;
 
     @LastModifiedDate
+    @Column(name="modifiedDate")
     private LocalDateTime modifiedDate;
 
     public PostEntity (Long id, String title, String p_content, LocalDateTime createdDate, UserEntity userEntity) {
-        this.id = id;
+        this.post_id = id;
         this.userEntity = userEntity;
         this.title = title;
         this.p_Content = p_content;
