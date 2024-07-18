@@ -24,6 +24,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Table(name = "POST")
 public class PostEntity {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "post_id")
@@ -33,8 +34,10 @@ public class PostEntity {
     @JoinColumn(name = "memberid")
     private UserEntity userEntity;
 
+    @Column(name = "title")
     private String title;
 
+    @Column(name = "p_content")
     private String p_Content;
 
     @CreatedDate
