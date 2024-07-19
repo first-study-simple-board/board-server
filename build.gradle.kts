@@ -35,6 +35,7 @@ dependencies {
     annotationProcessor("org.projectlombok:lombok")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     implementation ("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.6.0")
+    //implementation ("org.javassist', name: 'javassist', version: '3.15.0-GA")
 }
 
 tasks.withType<Test> {
