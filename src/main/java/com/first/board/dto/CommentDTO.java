@@ -3,8 +3,6 @@ package com.first.board.dto;
 import java.time.LocalDateTime;
 
 import com.first.board.entity.CommentEntity;
-import com.first.board.entity.PostEntity;
-import com.first.board.entity.UserEntity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -17,21 +15,20 @@ import lombok.NoArgsConstructor;
 @Getter
 public class CommentDTO {
     private Long id;
-    private PostEntity postEntity;
-    private UserEntity userEntity;
+    private Long post;
     private String content;
     private String comment_Type;
     private LocalDateTime createdDate;
 
     public CommentDTO(CommentEntity commentEntity){
         this.id = commentEntity.getCommentId();
-        this.postEntity = commentEntity.getPostId();
+        this.post = commentEntity.getPostId();
         this.content = commentEntity.getContent();
         this.createdDate = commentEntity.getCreatedDate();
     }
 
     public CommentEntity toCommentEntity() {
-        return new CommentEntity(id, content, createdDate, postEntity);
+        return new CommentEntity(id, content, createdDate, post);
     }
 
 }
