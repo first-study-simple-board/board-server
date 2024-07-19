@@ -39,18 +39,18 @@ public class PostEntity {
     private String content;
 
     @CreatedDate
-    @Column(name = "created_date", updatable = false)
-    private LocalDateTime createdDate;
+    @Column(name = "post_createddate", updatable = false)
+    private LocalDateTime post_createdDate;
 
     @LastModifiedDate
-    @Column(name = "modified_date")
-    private LocalDateTime modifiedDate;
+    @Column(name = "post_modifieddate")
+    private LocalDateTime post_modifiedDate;
 
-    public PostEntity(Long postId, String title, String content, LocalDateTime createdDate, Long user) {
+    public PostEntity(Long postId, String title, String content, LocalDateTime post_createdDate, Long user) {
         this.postId = postId;
         this.title = title;
         this.content = content;
-        this.createdDate = createdDate;
+        this.post_createdDate = post_createdDate;
         this.user = user;
     }
 
