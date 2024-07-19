@@ -7,9 +7,12 @@ import org.springframework.data.annotation.LastModifiedDate;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -27,9 +30,9 @@ public class PostEntity {
     @Column(name = "post_id")
     private Long postId;
 
-    // @ManyToOne(fetch = FetchType.LAZY)
-    // @JoinColumn(name = "user_id")
-    @Column(name="user")
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id")
+    //@Column(name="user")
     private Long user;
 
     @Column(name = "title")
@@ -46,12 +49,16 @@ public class PostEntity {
     @Column(name = "post_modifieddate")
     private LocalDateTime post_modifiedDate;
 
-    public PostEntity(Long postId, String title, String content, LocalDateTime post_createdDate, Long user) {
+    @Column(name="useFlag")
+    private boolean useFlag;
+
+    public PostEntity(Long postId, String title, String content, LocalDateTime post_createdDate, Long user, boolean useFlag) {
         this.postId = postId;
         this.title = title;
         this.content = content;
         this.post_createdDate = post_createdDate;
         this.user = user;
+        this.useFlag = useFlag;
     }
 
     public void update(String title, String content) {

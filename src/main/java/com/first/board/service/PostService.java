@@ -39,6 +39,14 @@ public class PostService {
     }
 
     @Transactional
+    public List<PostDTO> getNonDeletePosts(boolean useFlag) {
+        List<PostEntity> posts = postRepository.findByUseFlag(useFlag);
+        return posts.stream()
+                    .map(post -> modelMapper.map(post, PostDTO.class))
+                    .collect(Collectors.toList());
+    }
+
+    @Transactional
     public PostDTO createdPost (PostDTO postDTO) {
         PostEntity postEntity = modelMapper.map(postDTO, PostEntity.class);
         PostEntity savePost = postRepository.save(postEntity);
@@ -57,19 +65,6 @@ public class PostService {
     @Transactional
     public void deleteByPostID (Long post_ID) {
         postRepository.deleteById(post_ID);
-    }
-
-
-    public void insertpost() {
-        PostDTO postDTO = new PostDTO();
-        postDTO.setTitle("제목");
-        postDTO.setPost_PW("글 비밀번호");
-        postDTO.setP_Content("냥");
-
-        PostEntity postEntity = modelMapper.map(postDTO, PostEntity.class);
-        PostEntity savePost = postRepository.save(postEntity);
-        modelMapper.map(savePost, PostDTO.class);
-        postRepository.save(postEntity);
     }
 
 }

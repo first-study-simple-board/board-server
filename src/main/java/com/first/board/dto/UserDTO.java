@@ -24,9 +24,9 @@ public class UserDTO {
     //Entity와 연결
     public UserDTO(UserEntity userEntity) {
         this.account = userEntity.getAccount();
-        this.id = userEntity.getUserId();
-        this.user_PW = userEntity.getUserPw();
-        this.user_NickName = userEntity.getUserName();
+        this.id = userEntity.getId();
+        this.user_PW = userEntity.getUser_PW();
+        this.user_NickName = userEntity.getUser_Name();
         this.logintype = userEntity.getLoginType();
         this.createdDate = userEntity.getCreatedDate();
     }

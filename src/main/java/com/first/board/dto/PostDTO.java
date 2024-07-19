@@ -21,6 +21,7 @@ public class PostDTO {
     private String title;
     private String p_Content;
     private String post_PW;
+    private boolean useFlag;
     private LocalDateTime post_createdDate;
     private LocalDateTime post_modifiedDate;
 
@@ -30,10 +31,10 @@ public class PostDTO {
         this.title = postEntity.getTitle();
         this.p_Content = postEntity.getContent();
         this.post_createdDate = postEntity.getPost_createdDate();
-        this.post_modifiedDate = postEntity.getPost_modifiedDate();   
+        this.post_modifiedDate = postEntity.getPost_modifiedDate();
     }
 
     public PostEntity toPostEntity() {
-        return new PostEntity(id, title, p_Content, post_createdDate, user);
+        return new PostEntity(id, title, p_Content, post_createdDate, user, useFlag);
     }
 }
