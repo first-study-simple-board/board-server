@@ -2,7 +2,9 @@ package com.first.board.dto;
 
 import java.time.LocalDateTime;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.first.board.entity.PostEntity;
+import com.first.board.entity.UserEntity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -17,7 +19,8 @@ import lombok.Setter;
 public class PostDTO {
     private Long id;
     // private UserEntity userEntity;
-    private Long user;
+    @JsonIgnore
+    private UserEntity user;
     private String title;
     private String p_Content;
     private String post_PW;

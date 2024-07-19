@@ -33,7 +33,7 @@ public class PostEntity {
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id")
     //@Column(name="user")
-    private Long user;
+    private UserEntity user;
 
     @Column(name = "title")
     private String title;
@@ -52,7 +52,7 @@ public class PostEntity {
     @Column(name="useFlag")
     private boolean useFlag;
 
-    public PostEntity(Long postId, String title, String content, LocalDateTime post_createdDate, Long user, boolean useFlag) {
+    public PostEntity(Long postId, String title, String content, LocalDateTime post_createdDate, UserEntity user, boolean useFlag) {
         this.postId = postId;
         this.title = title;
         this.content = content;

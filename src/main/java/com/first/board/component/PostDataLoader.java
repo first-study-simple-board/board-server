@@ -2,27 +2,46 @@ package com.first.board.component;
 
 import java.time.LocalDateTime;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import com.first.board.entity.PostEntity;
+import com.first.board.entity.UserEntity;
 import com.first.board.repository.PostRepository;
+import com.first.board.repository.UserRepository;
 
 import jakarta.annotation.PostConstruct;
 import jakarta.transaction.Transactional;
 
 @Component
 public class PostDataLoader {
-    private final PostRepository postRepository;
+    @Autowired
+    private UserRepository userRepository;
+
+    @Autowired
+    private PostRepository postRepository;
 
     public PostDataLoader(PostRepository postRepository) {
         this.postRepository = postRepository;
     }
+
     @PostConstruct
     @Transactional
     public void init() {
-        postRepository.save(new PostEntity(1L, "Title 1", "Content 1", LocalDateTime.now(), 1L, true));
-        postRepository.save(new PostEntity(2L, "Title 2", "Content 2", LocalDateTime.now(), 2L, true));
-        postRepository.save(new PostEntity(3L, "Title 3", "Content 3", LocalDateTime.now(), 3L, true));
+
+        
+        UserEntity user1 = new UserEntity(1L, "1234", "User 1", "A");
+        UserEntity user2 = new UserEntity(2L, "1234", "User 2", "A");
+        UserEntity user3 = new UserEntity(3L, "1234", "User 3", "A");
+
+        // UserEntity를 먼저 저장해야 할 수도 있습니다
+        userRepository.save(user1);
+        userRepository.save(user2);
+        userRepository.save(user3);
+
+        postRepository.save(new PostEntity(null, "Title 1", "Content 1", LocalDateTime.now(), user1, true));
+        postRepository.save(new PostEntity(null, "Title 2", "Content 2", LocalDateTime.now(), user2, true));
+        postRepository.save(new PostEntity(null, "Title 3", "Content 3", LocalDateTime.now(), user3, true));
     }
 
 }

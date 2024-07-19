@@ -2,7 +2,9 @@ package com.first.board.dto;
 
 import java.time.LocalDateTime;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.first.board.entity.CommentEntity;
+import com.first.board.entity.PostEntity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -15,7 +17,8 @@ import lombok.NoArgsConstructor;
 @Getter
 public class CommentDTO {
     private Long id;
-    private Long post;
+    @JsonIgnore
+    private PostEntity post;
     private String content;
     private String comment_Type;
     private LocalDateTime createdDate;
