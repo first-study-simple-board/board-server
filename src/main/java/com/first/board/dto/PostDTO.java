@@ -20,24 +20,22 @@ public class PostDTO {
     private Long id;
     // private UserEntity userEntity;
     @JsonIgnore
-    private UserEntity user;
+    private UserEntity author;
     private String title;
-    private String p_Content;
-    private String post_PW;
+    private String content;
     private boolean useFlag;
-    private LocalDateTime post_createdDate;
-    private LocalDateTime post_modifiedDate;
+    private LocalDateTime created_at ;
+    private LocalDateTime updated_at;
 
     public PostDTO(PostEntity postEntity){
         this.id = postEntity.getPostId();
-        this.user = postEntity.getUser();
+        this.author = postEntity.getUser();
         this.title = postEntity.getTitle();
-        this.p_Content = postEntity.getContent();
-        this.post_createdDate = postEntity.getPost_createdDate();
-        this.post_modifiedDate = postEntity.getPost_modifiedDate();
+        this.created_at  = postEntity.getPost_createdDate();
+        this.updated_at = postEntity.getPost_modifiedDate();
     }
 
     public PostEntity toPostEntity() {
-        return new PostEntity(id, title, p_Content, post_createdDate, user, useFlag);
+        return new PostEntity(id, title, content, created_at , author, useFlag);
     }
 }
