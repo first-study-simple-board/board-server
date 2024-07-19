@@ -9,7 +9,7 @@ env:
   AWS_REGION: ap-northeast-2 # 리전
   S3_BUCKET_NAME: test-bucket-board # 버킷 이름
   CODE_DEPLOY_APPLICATION_NAME: code-deploy-board # CodeDeploy 애플리케이션 이름
-  CODE_DEPLOY_DEPLOYMENT_GROUP_NAME: code-deploy-group # CodeDeploy 배포 그룹 이름
+  CODE_DEPLOY_DEPLOYMENT_GROUP_NAME: code-depoly-group # CodeDeploy 배포 그룹 이름
 
 permissions:
   contents: read
