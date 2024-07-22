@@ -2,8 +2,8 @@ version: 0.0
 os: linux
 
 files:
-  - source:  /
-    destination: /home/ubuntu/app
+  - source: /build/libs/board-0.0.1-SNAPSHOT.jar
+    destination: /home/ubuntu/board-server/build/libs/
     overwrite: yes
 
 permissions:
