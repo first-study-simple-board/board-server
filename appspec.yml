@@ -4,7 +4,7 @@ os: linux
 files:
   - source: /build/libs/board-0.0.1-SNAPSHOT.jar
     destination: /home/ubuntu/board-server/build/libs/
-    overwrite: yes
+    overwrite: true
 
 permissions:
   - object: /
