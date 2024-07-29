@@ -5,6 +5,7 @@ import java.time.LocalDateTime;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.first.board.entity.CommentEntity;
 import com.first.board.entity.PostEntity;
+import com.first.board.entity.UserEntity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -21,17 +22,14 @@ public class CommentDTO {
     private PostEntity post;
     private String content;
     private String comment_Type;
-    private LocalDateTime createdDate;
+    private LocalDateTime created_at;
+    private UserEntity author;
 
     public CommentDTO(CommentEntity commentEntity){
         this.id = commentEntity.getCommentId();
-        this.post = commentEntity.getPostId();
         this.content = commentEntity.getContent();
-        this.createdDate = commentEntity.getCreatedDate();
-    }
-
-    public CommentEntity toCommentEntity() {
-        return new CommentEntity(id, content, createdDate, post);
+        this.created_at = commentEntity.getCreatedDate();
+        this.author = commentEntity.getUserId();
     }
 
 }

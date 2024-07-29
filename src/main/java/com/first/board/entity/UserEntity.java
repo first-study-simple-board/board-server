@@ -44,10 +44,16 @@ public class UserEntity {
     @Column(updatable=false, name = "CREATED_DATE" )
     private LocalDateTime createdDate;
 
-    public UserEntity (Long id, String user_PW, String user_Name, String loginType) {
+    public UserEntity (Long id, String user_PW, String user_Name, String loginType, LocalDateTime createdDate) {
         this.id = id;
         this.user_PW = user_PW;
         this.user_Name = user_Name;
         this.loginType = loginType;
+        this.createdDate = createdDate;
+    }
+
+    public void update (Long id, String name) {
+        this.id = id;
+        this.user_Name = name;
     }
 }
