@@ -44,6 +44,9 @@ public class UserEntity {
     @Column(updatable=false, name = "CREATED_DATE" )
     private LocalDateTime createdDate;
 
+    @Column(length = 1000)
+    private String refreshToken;
+
     public UserEntity (Long id, String user_PW, String user_Name, String loginType, LocalDateTime createdDate) {
         this.id = id;
         this.user_PW = user_PW;

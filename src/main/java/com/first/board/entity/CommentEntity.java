@@ -46,5 +46,13 @@ public class CommentEntity {
     public void update (String content) {
         this.content = content;
     }
+
+    public CommentEntity(Long commentId, PostEntity postId, String content, LocalDateTime createdDate, UserEntity user) {
+        this.commentId = commentId;
+        this.postId = postId;
+        this.content = content;
+        this.createdDate = createdDate;
+        this.userId = user;
+    }
 }
 

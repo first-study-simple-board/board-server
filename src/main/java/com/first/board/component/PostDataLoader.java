@@ -5,8 +5,10 @@ import java.time.LocalDateTime;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import com.first.board.entity.CommentEntity;
 import com.first.board.entity.PostEntity;
 import com.first.board.entity.UserEntity;
+import com.first.board.repository.CommentRepository;
 import com.first.board.repository.PostRepository;
 import com.first.board.repository.UserRepository;
 
@@ -20,6 +22,9 @@ public class PostDataLoader {
 
     @Autowired
     private PostRepository postRepository;
+
+    @Autowired
+    private CommentRepository commentRepository;
 
     public PostDataLoader(PostRepository postRepository) {
         this.postRepository = postRepository;
@@ -39,9 +44,15 @@ public class PostDataLoader {
         userRepository.save(user2);
         userRepository.save(user3);
 
-        postRepository.save(new PostEntity(null, "Title 1", "Content 1", LocalDateTime.now(), user1, true));
+        PostEntity post1 = new PostEntity(null, "Title 1", "Content 1", LocalDateTime.now(), user1, true);
+
+        postRepository.save(post1);
         postRepository.save(new PostEntity(null, "Title 2", "Content 2", LocalDateTime.now(), user2, true));
         postRepository.save(new PostEntity(null, "Title 3", "Content 3", LocalDateTime.now(), user3, true));
+
+        commentRepository.save(new CommentEntity(null, post1, "테스트1", LocalDateTime.now(), user1));
+        commentRepository.save(new CommentEntity(null, post1, "테스트2", LocalDateTime.now(), user1));
+        commentRepository.save(new CommentEntity(null, post1, "테스트3", LocalDateTime.now(), user1));
     }
 
 }
