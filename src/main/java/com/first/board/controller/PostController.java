@@ -3,6 +3,7 @@ package com.first.board.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -34,8 +35,8 @@ public class PostController {
     }
 
     @PutMapping("/{id}")
-    public PostDTO updatePost(@PathVariable("post_ID") Long postId, @RequestBody PostDTO postDTO) {
-        return postService.updatedpost(postId, postDTO);
+    public PostDTO updatePost(@PathVariable("id") Long id, @RequestBody PostDTO postDTO) {
+        return postService.updatedpost(id, postDTO);
     }
 
     @PostMapping()
@@ -43,8 +44,8 @@ public class PostController {
         return postService.createdPost(postDTO);
     }
     
-    @GetMapping("/{id}")
-    public void deletePost(@PathVariable("post_ID")Long post_ID) {
-        postService.deleteByPostID(post_ID);
+    @DeleteMapping("/{id}")
+    public void deletePost(@PathVariable("id")Long id) {
+        postService.deleteByPostID(id);
     }
 }

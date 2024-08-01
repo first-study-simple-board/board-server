@@ -3,6 +3,7 @@ package com.first.board.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -33,7 +34,7 @@ public class UserController {
     }
 
     @PutMapping("/{id}")
-    public UserDTO updateUser (@PathVariable("userID") Long id, @RequestBody UserDTO userDTO) {
+    public UserDTO updateUser (@PathVariable("id") Long id, @RequestBody UserDTO userDTO) {
         return userService.updatedUser(id, userDTO);
     }
 
@@ -42,8 +43,8 @@ public class UserController {
         return userService.createdUser(userDTO);
     }
 
-    @GetMapping("/{id}")
-    public void deleteUser(@PathVariable Long userID) {
-        userService.deleteById(userID);
+    @DeleteMapping("/{id}")
+    public void deleteUser(@PathVariable("id") Long id) {
+        userService.deleteById(id);
     }
 }
