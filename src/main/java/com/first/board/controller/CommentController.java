@@ -17,7 +17,6 @@ import com.first.board.service.CommentService;
 import io.swagger.v3.oas.annotations.tags.Tag;
 
 
-
 @Tag(name = "comments", description = "댓글 API")
 @RestController
 @RequestMapping("/api/comments")
