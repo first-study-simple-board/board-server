@@ -2,6 +2,7 @@ package com.first.board.entity;
 
 import java.time.LocalDateTime;
 
+import org.hibernate.annotations.ColumnDefault;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 
@@ -49,6 +50,7 @@ public class PostEntity {
     @Column(name = "post_modifieddate")
     private LocalDateTime post_modifiedDate;
 
+    @ColumnDefault("true")
     @Column(name="useFlag")
     private boolean useFlag;
 
@@ -61,8 +63,12 @@ public class PostEntity {
         this.useFlag = useFlag;
     }
 
-    public void update(String title, String content) {
+    public void updatePost(String title, String content) {
         this.title = title;
         this.content = content;
+    }
+
+    public void setUseFlag(boolean useFlag){
+        this.useFlag = useFlag;
     }
 }

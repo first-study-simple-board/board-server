@@ -39,8 +39,8 @@ public class PostService {
     }
 
     @Transactional
-    public List<PostDTO> getNonDeletePosts(boolean useFlag) {
-        List<PostEntity> posts = postRepository.findByUseFlag(useFlag);
+    public List<PostDTO> getTruePosts() {
+        List<PostEntity> posts = postRepository.findByUseFlag(true);
         return posts.stream()
                     .map(post -> modelMapper.map(post, PostDTO.class))
                     .collect(Collectors.toList());
@@ -57,14 +57,18 @@ public class PostService {
     public PostDTO updatedpost(Long postId, PostDTO postDTO) {
         PostEntity postEntity = postRepository.findById(postId)
                 .orElseThrow(() -> new RuntimeException("글을 찾을 수 없습니다."));
-        postEntity.update(postDTO.getTitle(), postDTO.getContent());
+        postEntity.updatePost(postDTO.getTitle(), postDTO.getContent());
         PostEntity updatedPost = postRepository.save(postEntity);
         return modelMapper.map(updatedPost, PostDTO.class);
     }
 
     @Transactional
-    public void deleteByPostID (Long post_ID) {
-        postRepository.deleteById(post_ID);
+    public PostDTO deleteByPostID (Long post_ID, PostDTO postDTO) {
+        PostEntity postEntity = postRepository.findById(post_ID)
+                .orElseThrow(() -> new RuntimeException("글을 찾을 수 없습니다."));
+        postEntity.setUseFlag(false);
+        PostEntity updatedUseFlag = postRepository.save(postEntity);
+        return modelMapper.map(updatedUseFlag, PostDTO.class);
     }
 
 }

@@ -35,11 +35,10 @@ public class PostDataLoader {
     public void init() {
 
         
-        UserEntity user1 = new UserEntity(null, "1234", "User 1", "A", LocalDateTime.now());
-        UserEntity user2 = new UserEntity(null, "1234", "User 2", "A", LocalDateTime.now());
-        UserEntity user3 = new UserEntity(null, "1234", "User 3", "A", LocalDateTime.now());
+        UserEntity user1 = new UserEntity(null, "1234", "user1", "A", LocalDateTime.now());
+        UserEntity user2 = new UserEntity(null, "1234", "user2", "A", LocalDateTime.now());
+        UserEntity user3 = new UserEntity(null, "1234", "user3", "A", LocalDateTime.now());
 
-        // UserEntity를 먼저 저장해야 할 수도 있습니다
         userRepository.save(user1);
         userRepository.save(user2);
         userRepository.save(user3);

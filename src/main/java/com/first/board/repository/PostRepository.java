@@ -11,4 +11,5 @@ public interface PostRepository extends JpaRepository<PostEntity, Long> {
     // List<PostEntity> findByUseFlag(@Param("useFlag") boolean useFlag);
 
     List<PostEntity> findByUseFlag(boolean useFlag);
+
 }

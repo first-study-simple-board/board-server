@@ -29,8 +29,13 @@ public class PostController {
         this.postService = postService;
     }
 
-    @GetMapping
+    @GetMapping("/all")
     public List<PostDTO> getAllPosts() {
+        return postService.getAllPost();
+    }
+
+    @GetMapping()
+    public List<PostDTO> getTruePost() {
         return postService.getAllPost();
     }
 
@@ -45,7 +50,7 @@ public class PostController {
     }
     
     @DeleteMapping("/{id}")
-    public void deletePost(@PathVariable("id")Long id) {
-        postService.deleteByPostID(id);
+    public void deletePost(@PathVariable("id")Long id, @RequestBody PostDTO postDTO) {
+        postService.deleteByPostID(id, postDTO);
     }
 }
