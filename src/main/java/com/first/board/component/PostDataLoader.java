@@ -48,6 +48,7 @@ public class PostDataLoader {
         postRepository.save(post1);
         postRepository.save(new PostEntity(null, "Title 2", "Content 2", LocalDateTime.now(), user2, true));
         postRepository.save(new PostEntity(null, "Title 3", "Content 3", LocalDateTime.now(), user3, true));
+        postRepository.save(new PostEntity(null, "Title 4", "Content 4", LocalDateTime.now(), user3, false));
 
         commentRepository.save(new CommentEntity(null, post1, "테스트1", LocalDateTime.now(), user1));
         commentRepository.save(new CommentEntity(null, post1, "테스트2", LocalDateTime.now(), user1));
