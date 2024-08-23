@@ -35,7 +35,7 @@ dependencies {
     testImplementation("org.springframework.boot:spring-boot-starter-test")
     implementation ("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.6.0")
     implementation ("com.auth0:java-jwt:3.18.2")
-    implementation ("org.springframework.boot:spring-boot-starter-security")
+    //implementation ("org.springframework.boot:spring-boot-starter-security")
     implementation ("io.jsonwebtoken:jjwt:0.9.1")
 }
 

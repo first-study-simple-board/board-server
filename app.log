@@ -1,0 +1,110 @@
+nohup: ignoring input
+  .   ____          _            __ _ _
+ /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
+( ( )\___ | '_ | '_| | '_ \/ _` | \ \ \ \
+ \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
+  '  |____| .__|_| |_|_| |_\__, | / / / /
+ =========|_|==============|___/=/_/_/_/
+
+ :: Spring Boot ::                (v3.3.0)
+
+2024-08-23T10:57:16.787+09:00  INFO 2572 --- [board] [           main] com.first.board.BoardApplication         : Starting BoardApplication v0.0.1-SNAPSHOT using Java 21.0.1 with PID 2572 (C:\Users\sunne\workspace\vscode\board\build\libs\board-0.0.1-SNAPSHOT.jar started by sunne in C:\Users\sunne\workspace\vscode\board)
+2024-08-23T10:57:16.794+09:00  INFO 2572 --- [board] [           main] com.first.board.BoardApplication         : No active profile set, falling back to 1 default profile: "default"
+2024-08-23T10:57:18.606+09:00  INFO 2572 --- [board] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-23T10:57:18.716+09:00  INFO 2572 --- [board] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 96 ms. Found 3 JPA repository interfaces.
+2024-08-23T10:57:19.949+09:00  INFO 2572 --- [board] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-23T10:57:19.977+09:00  INFO 2572 --- [board] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-23T10:57:19.978+09:00  INFO 2572 --- [board] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-08-23T10:57:20.077+09:00  INFO 2572 --- [board] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-23T10:57:20.090+09:00  INFO 2572 --- [board] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3163 ms
+2024-08-23T10:57:20.560+09:00  INFO 2572 --- [board] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-23T10:57:20.795+09:00  INFO 2572 --- [board] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-23T10:57:20.898+09:00  INFO 2572 --- [board] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-23T10:57:22.083+09:00  INFO 2572 --- [board] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-23T10:57:22.151+09:00  INFO 2572 --- [board] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-08-23T10:57:23.135+09:00  INFO 2572 --- [board] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@118fbaf0
+2024-08-23T10:57:23.138+09:00  INFO 2572 --- [board] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-08-23T10:57:23.521+09:00  WARN 2572 --- [board] [           main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-23T10:57:23.523+09:00  WARN 2572 --- [board] [           main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-08-23T10:57:25.389+09:00  INFO 2572 --- [board] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-23T10:57:25.855+09:00  INFO 2572 --- [board] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-23T10:57:26.600+09:00 DEBUG 2572 --- [board] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        member
+        (user_account, created_date, logintype, user_name, user_pw) 
+    values
+        (?, ?, ?, ?, ?)
+2024-08-23T10:57:26.779+09:00 DEBUG 2572 --- [board] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        member
+        (user_account, created_date, logintype, user_name, user_pw) 
+    values
+        (?, ?, ?, ?, ?)
+2024-08-23T10:57:26.832+09:00 DEBUG 2572 --- [board] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        member
+        (user_account, created_date, logintype, user_name, user_pw) 
+    values
+        (?, ?, ?, ?, ?)
+2024-08-23T10:57:26.877+09:00 DEBUG 2572 --- [board] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        post
+        (p_content, post_createddate, post_modifieddate, title, use_flag, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2024-08-23T10:57:26.926+09:00 DEBUG 2572 --- [board] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        post
+        (p_content, post_createddate, post_modifieddate, title, use_flag, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2024-08-23T10:57:26.987+09:00 DEBUG 2572 --- [board] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        post
+        (p_content, post_createddate, post_modifieddate, title, use_flag, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2024-08-23T10:57:27.495+09:00  WARN 2572 --- [board] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-23T10:57:28.520+09:00  INFO 2572 --- [board] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2024-08-23T10:57:28.559+09:00  INFO 2572 --- [board] [           main] com.first.board.BoardApplication         : Started BoardApplication in 12.614 seconds (process running for 13.614)
+2024-08-23T11:01:41.584+09:00  INFO 2572 --- [board] [nio-8080-exec-5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-23T11:01:41.584+09:00  INFO 2572 --- [board] [nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2024-08-23T11:01:41.585+09:00  INFO 2572 --- [board] [nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2024-08-23T11:01:41.949+09:00 DEBUG 2572 --- [board] [nio-8080-exec-5] org.hibernate.SQL                        : 
+    select
+        pe1_0.post_id,
+        pe1_0.p_content,
+        pe1_0.post_createddate,
+        pe1_0.post_modifieddate,
+        pe1_0.title,
+        pe1_0.use_flag,
+        pe1_0.user_id 
+    from
+        post pe1_0
+2024-08-23T11:01:51.862+09:00 DEBUG 2572 --- [board] [nio-8080-exec-6] org.hibernate.SQL                        : 
+    select
+        pe1_0.post_id,
+        pe1_0.p_content,
+        pe1_0.post_createddate,
+        pe1_0.post_modifieddate,
+        pe1_0.title,
+        pe1_0.use_flag,
+        pe1_0.user_id 
+    from
+        post pe1_0
+2024-08-23T11:02:22.141+09:00 DEBUG 2572 --- [board] [io-8080-exec-10] org.hibernate.SQL                        : 
+    select
+        ce1_0.comment_id,
+        ce1_0.content,
+        ce1_0.created_date,
+        ce1_0.post_id,
+        ce1_0.user_id 
+    from
+        comment ce1_0
+2024-08-23T11:03:40.384+09:00  INFO 2572 --- [board] [nio-8080-exec-1] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 465 ms
