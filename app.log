@@ -8,103 +8,179 @@ nohup: ignoring input
 
  :: Spring Boot ::                (v3.3.0)
 
-2024-08-23T10:57:16.787+09:00  INFO 2572 --- [board] [           main] com.first.board.BoardApplication         : Starting BoardApplication v0.0.1-SNAPSHOT using Java 21.0.1 with PID 2572 (C:\Users\sunne\workspace\vscode\board\build\libs\board-0.0.1-SNAPSHOT.jar started by sunne in C:\Users\sunne\workspace\vscode\board)
-2024-08-23T10:57:16.794+09:00  INFO 2572 --- [board] [           main] com.first.board.BoardApplication         : No active profile set, falling back to 1 default profile: "default"
-2024-08-23T10:57:18.606+09:00  INFO 2572 --- [board] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2024-08-23T10:57:18.716+09:00  INFO 2572 --- [board] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 96 ms. Found 3 JPA repository interfaces.
-2024-08-23T10:57:19.949+09:00  INFO 2572 --- [board] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2024-08-23T10:57:19.977+09:00  INFO 2572 --- [board] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2024-08-23T10:57:19.978+09:00  INFO 2572 --- [board] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
-2024-08-23T10:57:20.077+09:00  INFO 2572 --- [board] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2024-08-23T10:57:20.090+09:00  INFO 2572 --- [board] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3163 ms
-2024-08-23T10:57:20.560+09:00  INFO 2572 --- [board] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2024-08-23T10:57:20.795+09:00  INFO 2572 --- [board] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
-2024-08-23T10:57:20.898+09:00  INFO 2572 --- [board] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
-2024-08-23T10:57:22.083+09:00  INFO 2572 --- [board] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2024-08-23T10:57:22.151+09:00  INFO 2572 --- [board] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2024-08-23T10:57:23.135+09:00  INFO 2572 --- [board] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@118fbaf0
-2024-08-23T10:57:23.138+09:00  INFO 2572 --- [board] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2024-08-23T10:57:23.521+09:00  WARN 2572 --- [board] [           main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2024-08-23T10:57:23.523+09:00  WARN 2572 --- [board] [           main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
-2024-08-23T10:57:25.389+09:00  INFO 2572 --- [board] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2024-08-23T10:57:25.855+09:00  INFO 2572 --- [board] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2024-08-23T10:57:26.600+09:00 DEBUG 2572 --- [board] [           main] org.hibernate.SQL                        : 
+2024-08-26T17:58:11.233+09:00  INFO 376 --- [board] [           main] com.first.board.BoardApplication         : Starting BoardApplication v0.0.1-SNAPSHOT using Java 21.0.1 with PID 376 (C:\Users\sunne\workspace\vscode\board\build\libs\board-0.0.1-SNAPSHOT.jar started by sunne in C:\Users\sunne\workspace\vscode\board)
+2024-08-26T17:58:11.240+09:00  INFO 376 --- [board] [           main] com.first.board.BoardApplication         : No active profile set, falling back to 1 default profile: "default"
+2024-08-26T17:58:13.187+09:00  INFO 376 --- [board] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2024-08-26T17:58:13.323+09:00  INFO 376 --- [board] [           main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 121 ms. Found 3 JPA repository interfaces.
+2024-08-26T17:58:14.658+09:00  INFO 376 --- [board] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2024-08-26T17:58:14.683+09:00  INFO 376 --- [board] [           main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2024-08-26T17:58:14.683+09:00  INFO 376 --- [board] [           main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.24]
+2024-08-26T17:58:14.768+09:00  INFO 376 --- [board] [           main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2024-08-26T17:58:14.770+09:00  INFO 376 --- [board] [           main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 3409 ms
+2024-08-26T17:58:15.163+09:00  INFO 376 --- [board] [           main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2024-08-26T17:58:15.315+09:00  INFO 376 --- [board] [           main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.5.2.Final
+2024-08-26T17:58:15.383+09:00  INFO 376 --- [board] [           main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2024-08-26T17:58:16.134+09:00  INFO 376 --- [board] [           main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2024-08-26T17:58:16.206+09:00  INFO 376 --- [board] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2024-08-26T17:58:17.228+09:00  INFO 376 --- [board] [           main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@74bdfa0b
+2024-08-26T17:58:17.231+09:00  INFO 376 --- [board] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2024-08-26T17:58:17.346+09:00  WARN 376 --- [board] [           main] org.hibernate.orm.deprecation            : HHH90000025: MySQL8Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2024-08-26T17:58:17.348+09:00  WARN 376 --- [board] [           main] org.hibernate.orm.deprecation            : HHH90000026: MySQL8Dialect has been deprecated; use org.hibernate.dialect.MySQLDialect instead
+2024-08-26T17:58:18.642+09:00  INFO 376 --- [board] [           main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2024-08-26T17:58:18.657+09:00 DEBUG 376 --- [board] [           main] org.hibernate.SQL                        : 
+    alter table comment 
+       drop 
+       foreign key FKs1slvnkuemjsq2kj4h3vhx7i1
+2024-08-26T17:58:18.881+09:00 DEBUG 376 --- [board] [           main] org.hibernate.SQL                        : 
+    alter table comment 
+       drop 
+       foreign key FK5xverdcul8imlu3dfd4liaxxc
+2024-08-26T17:58:18.946+09:00 DEBUG 376 --- [board] [           main] org.hibernate.SQL                        : 
+    alter table post 
+       drop 
+       foreign key FKpbvrk5iujntjh9oevilj6t3go
+2024-08-26T17:58:19.006+09:00 DEBUG 376 --- [board] [           main] org.hibernate.SQL                        : 
+    drop table if exists comment
+2024-08-26T17:58:19.096+09:00 DEBUG 376 --- [board] [           main] org.hibernate.SQL                        : 
+    drop table if exists member
+2024-08-26T17:58:19.169+09:00 DEBUG 376 --- [board] [           main] org.hibernate.SQL                        : 
+    drop table if exists post
+2024-08-26T17:58:19.249+09:00 DEBUG 376 --- [board] [           main] org.hibernate.SQL                        : 
+    create table comment (
+        comment_id bigint not null auto_increment,
+        created_date datetime(6),
+        post_id bigint,
+        user_id bigint,
+        content varchar(255),
+        primary key (comment_id)
+    ) engine=InnoDB
+2024-08-26T17:58:19.327+09:00 DEBUG 376 --- [board] [           main] org.hibernate.SQL                        : 
+    create table member (
+        created_date datetime(6),
+        user_id bigint not null auto_increment,
+        refresh_token varchar(1000),
+        logintype varchar(255),
+        user_account varchar(255),
+        user_name varchar(255),
+        user_pw varchar(255),
+        primary key (user_id)
+    ) engine=InnoDB
+2024-08-26T17:58:19.395+09:00 DEBUG 376 --- [board] [           main] org.hibernate.SQL                        : 
+    create table post (
+        use_flag bit default true,
+        post_createddate datetime(6),
+        post_id bigint not null auto_increment,
+        post_modifieddate datetime(6),
+        user_id bigint,
+        p_content varchar(255),
+        title varchar(255),
+        primary key (post_id)
+    ) engine=InnoDB
+2024-08-26T17:58:19.475+09:00 DEBUG 376 --- [board] [           main] org.hibernate.SQL                        : 
+    alter table comment 
+       add constraint FKs1slvnkuemjsq2kj4h3vhx7i1 
+       foreign key (post_id) 
+       references post (post_id)
+2024-08-26T17:58:19.667+09:00 DEBUG 376 --- [board] [           main] org.hibernate.SQL                        : 
+    alter table comment 
+       add constraint FK5xverdcul8imlu3dfd4liaxxc 
+       foreign key (user_id) 
+       references member (user_id)
+2024-08-26T17:58:19.912+09:00 DEBUG 376 --- [board] [           main] org.hibernate.SQL                        : 
+    alter table post 
+       add constraint FKpbvrk5iujntjh9oevilj6t3go 
+       foreign key (user_id) 
+       references member (user_id)
+2024-08-26T17:58:20.097+09:00  INFO 376 --- [board] [           main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2024-08-26T17:58:20.838+09:00 DEBUG 376 --- [board] [           main] org.hibernate.SQL                        : 
     insert 
     into
         member
-        (user_account, created_date, logintype, user_name, user_pw) 
+        (user_account, created_date, logintype, refresh_token, user_name, user_pw) 
     values
-        (?, ?, ?, ?, ?)
-2024-08-23T10:57:26.779+09:00 DEBUG 2572 --- [board] [           main] org.hibernate.SQL                        : 
+        (?, ?, ?, ?, ?, ?)
+2024-08-26T17:58:21.033+09:00 DEBUG 376 --- [board] [           main] org.hibernate.SQL                        : 
     insert 
     into
         member
-        (user_account, created_date, logintype, user_name, user_pw) 
+        (user_account, created_date, logintype, refresh_token, user_name, user_pw) 
     values
-        (?, ?, ?, ?, ?)
-2024-08-23T10:57:26.832+09:00 DEBUG 2572 --- [board] [           main] org.hibernate.SQL                        : 
+        (?, ?, ?, ?, ?, ?)
+2024-08-26T17:58:21.081+09:00 DEBUG 376 --- [board] [           main] org.hibernate.SQL                        : 
     insert 
     into
         member
-        (user_account, created_date, logintype, user_name, user_pw) 
+        (user_account, created_date, logintype, refresh_token, user_name, user_pw) 
     values
-        (?, ?, ?, ?, ?)
-2024-08-23T10:57:26.877+09:00 DEBUG 2572 --- [board] [           main] org.hibernate.SQL                        : 
+        (?, ?, ?, ?, ?, ?)
+2024-08-26T17:58:21.125+09:00 DEBUG 376 --- [board] [           main] org.hibernate.SQL                        : 
     insert 
     into
         post
         (p_content, post_createddate, post_modifieddate, title, use_flag, user_id) 
     values
         (?, ?, ?, ?, ?, ?)
-2024-08-23T10:57:26.926+09:00 DEBUG 2572 --- [board] [           main] org.hibernate.SQL                        : 
+2024-08-26T17:58:21.165+09:00 DEBUG 376 --- [board] [           main] org.hibernate.SQL                        : 
     insert 
     into
         post
         (p_content, post_createddate, post_modifieddate, title, use_flag, user_id) 
     values
         (?, ?, ?, ?, ?, ?)
-2024-08-23T10:57:26.987+09:00 DEBUG 2572 --- [board] [           main] org.hibernate.SQL                        : 
+2024-08-26T17:58:21.200+09:00 DEBUG 376 --- [board] [           main] org.hibernate.SQL                        : 
     insert 
     into
         post
         (p_content, post_createddate, post_modifieddate, title, use_flag, user_id) 
     values
         (?, ?, ?, ?, ?, ?)
-2024-08-23T10:57:27.495+09:00  WARN 2572 --- [board] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2024-08-23T10:57:28.520+09:00  INFO 2572 --- [board] [           main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2024-08-23T10:57:28.559+09:00  INFO 2572 --- [board] [           main] com.first.board.BoardApplication         : Started BoardApplication in 12.614 seconds (process running for 13.614)
-2024-08-23T11:01:41.584+09:00  INFO 2572 --- [board] [nio-8080-exec-5] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2024-08-23T11:01:41.584+09:00  INFO 2572 --- [board] [nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2024-08-23T11:01:41.585+09:00  INFO 2572 --- [board] [nio-8080-exec-5] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2024-08-23T11:01:41.949+09:00 DEBUG 2572 --- [board] [nio-8080-exec-5] org.hibernate.SQL                        : 
-    select
-        pe1_0.post_id,
-        pe1_0.p_content,
-        pe1_0.post_createddate,
-        pe1_0.post_modifieddate,
-        pe1_0.title,
-        pe1_0.use_flag,
-        pe1_0.user_id 
-    from
-        post pe1_0
-2024-08-23T11:01:51.862+09:00 DEBUG 2572 --- [board] [nio-8080-exec-6] org.hibernate.SQL                        : 
-    select
-        pe1_0.post_id,
-        pe1_0.p_content,
-        pe1_0.post_createddate,
-        pe1_0.post_modifieddate,
-        pe1_0.title,
-        pe1_0.use_flag,
-        pe1_0.user_id 
-    from
-        post pe1_0
-2024-08-23T11:02:22.141+09:00 DEBUG 2572 --- [board] [io-8080-exec-10] org.hibernate.SQL                        : 
-    select
-        ce1_0.comment_id,
-        ce1_0.content,
-        ce1_0.created_date,
-        ce1_0.post_id,
-        ce1_0.user_id 
-    from
-        comment ce1_0
-2024-08-23T11:03:40.384+09:00  INFO 2572 --- [board] [nio-8080-exec-1] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 465 ms
+2024-08-26T17:58:21.243+09:00 DEBUG 376 --- [board] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        post
+        (p_content, post_createddate, post_modifieddate, title, use_flag, user_id) 
+    values
+        (?, ?, ?, ?, ?, ?)
+2024-08-26T17:58:21.281+09:00 DEBUG 376 --- [board] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        comment
+        (content, created_date, post_id, user_id) 
+    values
+        (?, ?, ?, ?)
+2024-08-26T17:58:21.319+09:00 DEBUG 376 --- [board] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        comment
+        (content, created_date, post_id, user_id) 
+    values
+        (?, ?, ?, ?)
+2024-08-26T17:58:21.359+09:00 DEBUG 376 --- [board] [           main] org.hibernate.SQL                        : 
+    insert 
+    into
+        comment
+        (content, created_date, post_id, user_id) 
+    values
+        (?, ?, ?, ?)
+2024-08-26T17:58:21.723+09:00  WARN 376 --- [board] [           main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2024-08-26T17:58:22.514+09:00  WARN 376 --- [board] [           main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Failed to start bean 'webServerStartStop'
+2024-08-26T17:58:22.517+09:00  INFO 376 --- [board] [           main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2024-08-26T17:58:22.521+09:00  INFO 376 --- [board] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2024-08-26T17:58:22.658+09:00  INFO 376 --- [board] [           main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2024-08-26T17:58:22.675+09:00  INFO 376 --- [board] [           main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2024-08-26T17:58:22.696+09:00 ERROR 376 --- [board] [           main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Web server failed to start. Port 8080 was already in use.
+
+Action:
+
+Identify and stop the process that's listening on port 8080 or configure this application to listen on another port.
+

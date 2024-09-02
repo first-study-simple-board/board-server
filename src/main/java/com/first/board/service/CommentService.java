@@ -33,7 +33,7 @@ public class CommentService {
     }
 
     @Transactional
-    public CommentDTO getCommentById (Long comment_ID) {
+    public CommentDTO getCommentByCommentId (Long comment_ID) {
         CommentEntity commentEntity = commentRepository.findById(comment_ID).orElseThrow(() -> new RuntimeException("댓글을 찾을 수 없습니다."));
         return modelMapper.map(commentEntity, CommentDTO.class);
     }
