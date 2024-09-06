@@ -35,8 +35,8 @@ public class UserController {
         return userService.getAllUser();
     }
 
-    @Operation(summary = "all users", description = "모든 유저들을 반환하는 메소드")
-    @GetMapping
+    @Operation(summary = "find user", description = "유저 ID로 찾는 메소드")
+    @GetMapping("/{id}")
     public UserDTO findUser(@PathVariable("id") Long id) {
         return userService.getUserByID(id);
     }
