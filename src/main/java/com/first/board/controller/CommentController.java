@@ -1,6 +1,7 @@
 package com.first.board.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -17,7 +18,7 @@ import com.first.board.service.CommentService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.tags.Tag;
 
-
+@CrossOrigin(origins="*", allowedHeaders = "*")
 @Tag(name = "comments", description = "댓글 API")
 @RestController
 @RequestMapping("/api/comments")
