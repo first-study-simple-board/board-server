@@ -1,7 +1,5 @@
 package com.first.board.controller;
 
-import java.util.List;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -13,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.first.board.dto.CommentDTO;
+import com.first.board.entity.PostEntity;
 import com.first.board.service.CommentService;
 
 import io.swagger.v3.oas.annotations.Operation;
@@ -31,16 +30,16 @@ public class CommentController {
     }
 
 
-    @Operation(summary = "all comments", description = "모든 댓글을 반환하는 메소드")
-    @GetMapping
-    public List<CommentDTO> getAllComment() {
-        return commentService.getAllComments();
-    }
+    // @Operation(summary = "all comments", description = "모든 댓글을 반환하는 메소드")
+    // @GetMapping
+    // public List<CommentDTO> getAllComment() {
+    //     return commentService.getAllComments();
+    // }
     
-    @Operation(summary = "find comment", description = "댓글 ID로 찾는 메소드") 
+    @Operation(summary = "find comment", description = "글 ID로 찾는 메소드") 
     @GetMapping("/{id}")
-    public CommentDTO findComment(@PathVariable("comment_ID") Long id) {
-        return commentService.getCommentByCommentId(id);
+    public CommentDTO findComment(@PathVariable("post_ID") PostEntity id) {
+        return commentService.getCommentByPostID(id);
     }
 
     @Operation(summary = "update comment", description = "댓글을 변경하는 메소드")

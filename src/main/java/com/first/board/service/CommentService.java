@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import com.first.board.dto.CommentDTO;
 import com.first.board.entity.CommentEntity;
+import com.first.board.entity.PostEntity;
 import com.first.board.repository.CommentRepository;
 
 import jakarta.transaction.Transactional;
@@ -32,9 +33,15 @@ public class CommentService {
                     .collect(Collectors.toList());
     }
 
+    // @Transactional
+    // public CommentDTO getCommentByCommentId (Long comment_ID) {
+    //     CommentEntity commentEntity = commentRepository.findById(comment_ID).orElseThrow(() -> new RuntimeException("댓글을 찾을 수 없습니다."));
+    //     return modelMapper.map(commentEntity, CommentDTO.class);
+    // }
+
     @Transactional
-    public CommentDTO getCommentByCommentId (Long comment_ID) {
-        CommentEntity commentEntity = commentRepository.findById(comment_ID).orElseThrow(() -> new RuntimeException("댓글을 찾을 수 없습니다."));
+    public CommentDTO getCommentByPostID (PostEntity post_ID) {
+        CommentEntity commentEntity = commentRepository.findByPostId(post_ID).orElseThrow(() -> new RuntimeException("댓글을 찾을 수 없습니다."));
         return modelMapper.map(commentEntity, CommentDTO.class);
     }
 

@@ -47,14 +47,7 @@ public class PostController {
     // })
 
     @ApiResponses(value = {@ApiResponse(
-                                responseCode = "200", description = "OK")
-    })
-    @Operation(summary = "all posts", description = "삭제된 게시물 포함 모든 게시물을 반환하는 메소드")
-    @GetMapping("/all")
-    public List<PostDTO> getAllPosts() {
-        return postService.getAllPost();
-    }
-
+                                responseCode = "200", description = "OK")})
     @Operation(summary = "posts", description = "게시물을 반환하는 메소드")
     @GetMapping()
     public List<PostDTO> getTruePost() {
