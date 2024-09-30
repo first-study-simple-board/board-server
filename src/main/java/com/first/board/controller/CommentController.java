@@ -36,9 +36,9 @@ public class CommentController {
     // }
     
     @Operation(summary = "find comment", description = "글 ID로 찾는 메소드") 
-    @GetMapping("/{id}")
-    public CommentDTO findComment(@PathVariable("post_ID") PostEntity id) {
-        return commentService.getCommentByPostID(id);
+    @GetMapping("/post/{post_ID}")
+    public CommentDTO findComment(@PathVariable("post_ID") PostEntity post_ID) {
+        return commentService.getCommentByPostID(post_ID);
     }
 
     @Operation(summary = "update comment", description = "댓글을 변경하는 메소드")
